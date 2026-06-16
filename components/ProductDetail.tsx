@@ -1,5 +1,6 @@
 // src/components/ProductDetail.tsx
 import { Product } from '@/types/product';
+import Image from 'next/image';
 
 interface ProductDetailProps {
   product: Product;
@@ -12,10 +13,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         
         {/* กล่องจัดแสดงรูปภาพสินค้า */}
         <div className="flex items-center justify-center bg-slate-50 rounded-2xl p-8 min-h-[300px] sm:min-h-[400px]">
-          <img
+          <Image
             src={product.image}
             alt={product.title}
             className="object-contain max-h-[380px] w-full mix-blend-multiply transition-transform duration-300 hover:scale-105"
+            width={400}
+            height={400}
           />
         </div>
 
