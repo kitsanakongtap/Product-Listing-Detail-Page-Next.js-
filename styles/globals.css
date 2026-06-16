@@ -1,0 +1,38 @@
+/* styles/globals.css */
+
+/* 1. สั่งเปิดใช้งาน Tailwind v4 */
+@import "tailwindcss";
+
+/* 2. การเขียน Custom Style และใช้ @apply ใน Tailwind v4 */
+@theme {
+  /* สามารถประกาศตัวแปรระบบตรงนี้ได้ถ้าต้องการ */
+}
+
+/* ปรับแต่งสไตล์พื้นฐานของ body (ใน v4 เขียนปกติแบบนี้ได้เลย ไม่ต้องหุ้ม @layer base) */
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+/* 3. สไตล์เสริมสำหรับตัดขอบขาวรูปภาพสินค้า */
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+/* 4. ตกแต่ง Scrollbar ให้สวยงาม */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
