@@ -1,6 +1,7 @@
 // src/components/ProductCard.tsx
 import Link from 'next/link';
 import { Product } from '@/types/product';
+import Image from 'next/image';
 
 interface ProductCardProps {
   product: Product;
@@ -11,11 +12,14 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="group flex flex-col bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden h-full">
       {/* Container รูปภาพสินค้า */}
       <div className="relative p-6 bg-slate-50/50 flex items-center justify-center aspect-square overflow-hidden border-b border-slate-50">
-        <img
+        <Image
           src={product.image}
           alt={product.title}
           className="object-contain h-44 w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply"
           loading="lazy"
+          width={400}
+          height={400}
+
         />
       </div>
 
