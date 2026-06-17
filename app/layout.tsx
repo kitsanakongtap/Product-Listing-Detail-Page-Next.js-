@@ -2,15 +2,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-// หรือแบบสัญจรโฟลเดอร์: import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Trainee Assignment - FakeStore",
+  title: "FakeStore",
   description: "Product Listing and Detail Page using Next.js",
 };
 
-// ⚠️ จุดสำคัญที่สุด: ต้องมี "export default function" ห้ามตกหล่นเด็ดขาด
 export default function RootLayout({
   children,
 }: {
@@ -25,7 +23,7 @@ export default function RootLayout({
               🛒 FAKE<span className="text-slate-800">STORE</span>
             </span>
             <span className="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">
-              Trainee Project #1
+              Project #1
             </span>
           </div>
         </nav>

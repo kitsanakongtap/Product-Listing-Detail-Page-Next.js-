@@ -17,6 +17,8 @@ async function getProducts(): Promise<Product[]> {
 export default async function ProductListPage() {
   const products = await getProducts();
 
+   //console.log('Fetched products:', products); // Debug: ตรวจสอบข้อมูลที่ดึงมาได้
+
   return (
     <main className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
